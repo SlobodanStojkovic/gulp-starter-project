@@ -1,3 +1,45 @@
+$backgroundColor: linear-gradient(180deg, #b068e9 0%, #6463e7 100%);
+$white: white;
+$boxShadowFaq: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+
 html {
   font-size: 16px;
+}
+
+.container {
+  background: $backgroundColor;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq__section {
+  margin: 148px 24px 448px;
+  width: 327px;
+  height: 535px;
+  border-radius: 23px;
+  background-color: $white;
+  padding: 100px 30px 50px;
+  box-shadow: $boxShadowFaq;
+
+  &__img {
+    width: 237px;
+    height: 180px;
+  }
+
+  &__qa {
+    &__question {
+      font-size: 13px;
+      font-weight: normal;
+
+      &__active {
+        font-weight: bold;
+      }
+    }
+
+    &__answer {
+      font-size: 12px;
+    }
+  }
 }
