@@ -1,9 +1,30 @@
+@font-face {
+  font-family: Kumbh Sans;
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-regular.ttf);
+}
+
+@font-face {
+  font-family: Kumbh Sans;
+  font-style: normal;
+  font-weight: bold;
+  src: url(../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-700.ttf);
+}
+
+@font-face {
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-weight: bolder;
+  src: url(../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-900.ttf);
+}
+
 $backgroundColor: linear-gradient(180deg, #b068e9 0%, #6463e7 100%);
 $white: white;
 $boxShadowFaq: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
 
 html {
-  font-size: 16px;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 .container {
@@ -23,11 +44,6 @@ html {
   padding: 100px 30px 50px;
   box-shadow: $boxShadowFaq;
 
-  &__img {
-    width: 237px;
-    height: 180px;
-  }
-
   &__qa {
     &__question {
       font-size: 13px;
@@ -40,6 +56,14 @@ html {
 
     &__answer {
       font-size: 12px;
+    }
+  }
+
+  &__box {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
     }
   }
 }
